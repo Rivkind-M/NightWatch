@@ -257,16 +257,16 @@
             }
             this.newPos = function () {
                 if (this.x + this.speedX + pieceWidth < 0 ) {
-                    this.x += myGameArea.canvas.width + pieceWidth;
+                    this.speedX *= -1;
                 } else if (this.x + this.speedX > myGameArea.canvas.width) {
-                    this.x -= myGameArea.canvas.width + pieceWidth;
+                    this.speedX *= -1;
                 } else {
                     this.x += this.speedX;
                 }
                 if (this.y + this.speedY + pieceHeight < 0) {
-                    this.y += myGameArea.canvas.height + pieceHeight;
+                    this.speedY *= -1;
                 } else if (this.y + this.speedY > myGameArea.canvas.height) {
-                    this.y -= myGameArea.canvas.height  + pieceHeight;
+                    this.speedY *= -1;
                 } else {
                     this.y += this.speedY;
                 }
